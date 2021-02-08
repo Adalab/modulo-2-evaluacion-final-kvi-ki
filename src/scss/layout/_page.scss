@@ -1,1 +1,18 @@
-
+.main {
+    &__input {
+        background-color: MintCream;
+        border-radius: 5px;
+        height: 30px;
+        border: 1px solid grey;
+    }
+    &__button {
+        height: 30px;
+        background-color: MediumTurquoise;
+        color: white;
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+    &__result {
+        margin-bottom: 15px;
+    }
+}
