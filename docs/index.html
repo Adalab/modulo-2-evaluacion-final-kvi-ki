@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Evaluación final - Victoria Kovaleva</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <!-- <link rel="icon" href="./assets/images/favicon.png" /> -->
   </head>
 
   <body class="page">
@@ -15,9 +14,12 @@
         <h1 class="header__title">Buscador de series</h1>
     </header>
     <main class="main">
-        <input type="text" class="main__input" placeholder="Escribe por aquí"/>
-        <input type="button" value="Search" class="main__button" />
-        <div class="main__result"></div>
+        <input type="text" class="main__input js-search" placeholder="Escribe por aquí"/>
+        <input type="button" value="Search" class="main__button js-button" />
+        <section class="main__lists">
+            <div class="js-favourites"></div>
+            <div class="main__lists--result js-result"></div>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__box">
