@@ -1,18 +1,28 @@
 .main {
-    &__input {
-        background-color: MintCream;
-        border-radius: 5px;
-        height: 30px;
-        border: 1px solid grey;
+  &__input {
+    background-color: MintCream;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid grey;
+  }
+  &__button {
+    height: 30px;
+    background-color: MediumTurquoise;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  &__lists {
+    display: flex;
+    flex-direction: row;
+    &--result {
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
-    &__button {
-        height: 30px;
-        background-color: MediumTurquoise;
-        color: white;
-        border-radius: 5px;
-        border: 1px solid grey;
-    }
-    &__result {
-        margin-bottom: 15px;
-    }
+  }
+}
+
+.js-favourite {
+  background-color: MistyRose;
+  font-family: "Roboto Mono", monospace;
 }
