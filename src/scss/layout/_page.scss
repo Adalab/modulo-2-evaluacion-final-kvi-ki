@@ -11,6 +11,7 @@
     color: white;
     border-radius: 5px;
     border: 1px solid grey;
+    cursor: pointer;
   }
   &__lists {
     display: flex;
@@ -22,7 +23,25 @@
   }
 }
 
+.js-searchlist {
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+
 .js-favourite {
   background-color: MistyRose;
-  font-family: "Roboto Mono", monospace;
+  font-family: $font-main;
+  font-size: 18px;
+  list-style: none;
+}
+
+.js-removed {
+  display: none;
+}
+
+.icon {
+  background-color: MistyRose;
+  cursor: pointer;
 }

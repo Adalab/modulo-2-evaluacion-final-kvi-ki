@@ -3,7 +3,6 @@
 const searchField = document.querySelector('.js-search');
 const searchButton = document.querySelector('.js-button');
 const resultsList = document.querySelector('.js-result');
-
 let moviesList = [];
 
 function getResult() {
@@ -15,20 +14,26 @@ function getResult() {
         });
 }
 
+const ul = document.createElement('ul');
 function paintMovies() {
-    const ul = document.createElement('ul');
-    for (let i = 0; i < moviesList.length; i++) {
-        if (moviesList[i].show.image === null) {
-            moviesList[i].show.image = `https://via.placeholder.com/210x295/ffffff/666666/?text=TV`;
-        } else {
-            moviesList[i].show.image = moviesList[i].show.image.medium
-        }
-        const list = document.createElement('li');
-        list.innerHTML = `${moviesList[i].show.name}<img src="${moviesList[i].show.image}"/>`
-        ul.appendChild(list);
-        resultsList.appendChild(ul);
 
-        list.addEventListener('click', () => paintFavourites(moviesList[i].show));
+    if (searchField.value === "") {
+        alert(`Por favor, escribe el nombre de la pelicula/serie en el campo de la busqueda`);
+    } else {
+        for (let i = 0; i < moviesList.length; i++) {
+            if (moviesList[i].show.image === null) {
+                moviesList[i].show.image = `https://via.placeholder.com/210x295/ffffff/666666/?text=TV`;
+            } else {
+                moviesList[i].show.image = moviesList[i].show.image.medium
+            }
+            const list = document.createElement('li');
+            list.innerHTML = `<img src="${moviesList[i].show.image}"/> ${moviesList[i].show.name}`
+            ul.appendChild(list);
+            resultsList.appendChild(ul);
+            list.classList.add('js-searchlist');
+
+            list.addEventListener('click', () => paintFavourites(moviesList[i].show));
+        }
     }
 }
 
