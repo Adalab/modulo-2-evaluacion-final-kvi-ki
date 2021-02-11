@@ -3,6 +3,7 @@
 const searchField = document.querySelector('.js-search');
 const searchButton = document.querySelector('.js-button');
 const resultsList = document.querySelector('.js-result');
+const logButton = document.querySelector('.js-log');
 let moviesList = [];
 
 function getResult() {
@@ -16,7 +17,6 @@ function getResult() {
 
 const ul = document.createElement('ul');
 function paintMovies() {
-
     if (searchField.value === "") {
         alert(`Por favor, escribe el nombre de la pelicula/serie en el campo de la busqueda`);
     } else {
@@ -27,7 +27,7 @@ function paintMovies() {
                 moviesList[i].show.image = moviesList[i].show.image.medium
             }
             const list = document.createElement('li');
-            list.innerHTML = `<img src="${moviesList[i].show.image}"/> ${moviesList[i].show.name}`
+            list.innerHTML = `<img src="${moviesList[i].show.image}"/> ${moviesList[i].show.name}<p>"${moviesList[i].show.status}"`
             ul.appendChild(list);
             resultsList.appendChild(ul);
             list.classList.add('js-searchlist');
@@ -38,3 +38,10 @@ function paintMovies() {
 }
 
 searchButton.addEventListener('click', getResult);
+
+function clickLog() {
+    for (let i = 0; i < favs.length; i++) {
+        console.log(favs[i].name);
+    }
+}
+logButton.addEventListener('click', clickLog);
